@@ -1,0 +1,8 @@
+dist/
+node_modules/
+scripts/
+/*.html
+lib/
+__tests__/
+/coverage/
+*.config.js
