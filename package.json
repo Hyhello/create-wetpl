@@ -1,6 +1,6 @@
 {
     "name": "create-wetpl",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "A Cli Tool for weTpl",
     "type": "module",
     "bin": {
