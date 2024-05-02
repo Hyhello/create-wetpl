@@ -40,7 +40,8 @@ function init() {
                     logger.info('\nDone. Now run:\n');
                     logger.success(`  cd ${projectName}`);
                     logger.success('  npm install');
-                    logger.success('  npm run dev');
+                    logger.success('  npm run dev\n');
+                    process.exit(0);
                 }
             });
         })
