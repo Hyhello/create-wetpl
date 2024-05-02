@@ -13,7 +13,7 @@ function init() {
 
     prompts(promptsConfig, {
         onCancel() {
-            logger.warn('\n Info: Create Cancelled');
+            logger.warn('\n Info: Create Cancelled\n');
             process.exit(0);
         }
     })
