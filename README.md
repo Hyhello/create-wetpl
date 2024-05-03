@@ -4,7 +4,7 @@ Wetpl -  A Scaffold for Quickly Creating Project
 
 ## Usage
 
-To create a new project using create-wetpl, simply run the following command in your terminal:
+To create a new project using `create-wetpl`, simply run the following command in your terminal:
 
 ```sh
 npm create wetpl@latest
