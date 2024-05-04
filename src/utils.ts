@@ -28,3 +28,8 @@ export const coverFileByOptions = (filePath: string, options: Record<string, str
     const pkg = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     fs.writeFileSync(filePath, JSON.stringify({ ...pkg, ...options }, null, 2));
 };
+
+// 删除文件夹
+export const removeSync = (pathDir: string) => {
+    fs.rmSync(pathDir, { recursive: true, focus: true });
+};

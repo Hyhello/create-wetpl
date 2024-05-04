@@ -5,7 +5,7 @@ import logger from './logger';
 import getBanner from './banner';
 import gitClone from 'git-clone';
 import { GIT_REPO, promptsConfig } from './config';
-import { resolveCWD, pathResolve, pathExistsSync, coverFileByOptions } from './utils';
+import { removeSync, resolveCWD, pathResolve, pathExistsSync, coverFileByOptions } from './utils';
 
 function init() {
     // 输出banner
@@ -35,7 +35,7 @@ function init() {
                 } else {
                     const pkgOptions = { name: projectName, version: '1.0.0', description: projectDescription };
                     coverFileByOptions(pathResolve(projectName, 'package.json'), pkgOptions);
-
+                    removeSync(pathResolve(projectName, '.git'));
                     // copy in create-vue
                     logger.info('\nDone. Now run:\n');
                     logger.success(`  cd ${projectName}`);
