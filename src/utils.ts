@@ -31,5 +31,5 @@ export const coverFileByOptions = (filePath: string, options: Record<string, str
 
 // 删除文件夹
 export const removeSync = (pathDir: string) => {
-    fs.rmSync(pathDir, { recursive: true, focus: true });
+    fs.rmSync(pathDir, { recursive: true, force: true });
 };
