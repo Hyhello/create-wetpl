@@ -1,0 +1,23 @@
+name: Publish
+
+# When a tag is pushed, create a release
+on:
+  push:
+    tags:
+      - "**" # Push events to matching v*, i.e. v1.0, v20.15.10
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'yarn'
+          node-version: 16
+          cache-dependency-path: 'yarn.lock'
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}

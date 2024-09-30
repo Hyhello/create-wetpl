@@ -1,0 +1,29 @@
+{
+    "git": {
+        "commitMessage": "chore: Release v${version}"
+    },
+    "github": {
+        "release": false
+    },
+    "npm": {
+        "publish": false
+    },
+    "hooks": {
+        "before:init": [
+            "npm run lint"
+        ]
+    },
+    "plugins": {
+        "@release-it/conventional-changelog": {
+            "preset": {
+                "name": "angular"
+            },
+            "header": "# 更新日志",
+            "context": {
+                "isPatch": true
+            },
+            "infile": "CHANGELOG.md"
+        }
+    },
+    "$schema": "https://unpkg.com/release-it@17/schema/release-it.json"
+}

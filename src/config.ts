@@ -3,7 +3,7 @@ import type { PromptObject } from 'prompts';
 import { isValidPackageName } from './utils';
 
 // git repo
-export const GIT_REPO = 'https://github.com/Hyhello/template.git';
+export const GIT_REPO = 'github:Hyhello/template';
 
 // prompts config
 export const promptsConfig: Array<PromptObject> = [

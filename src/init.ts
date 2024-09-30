@@ -3,9 +3,9 @@
 import prompts from 'prompts';
 import logger from './logger';
 import getBanner from './banner';
-import gitClone from 'git-clone';
+import { downloadTemplate } from 'giget';
 import { GIT_REPO, promptsConfig } from './config';
-import { removeSync, resolveCWD, pathResolve, pathExistsSync, coverFileByOptions } from './utils';
+import { resolveCWD, pathResolve, pathExistsSync, coverFileByOptions } from './utils';
 
 function init() {
     // 输出banner
@@ -28,22 +28,20 @@ function init() {
             }
             // copy in create-vue
             logger.info(`\nScaffolding project in ${outputDir}...`);
-            gitClone(GIT_REPO, outputDir, { shallow: true, args: ['-b', projectType] }, (e) => {
-                if (e) {
-                    logger.error(`\n${e.stack || e.message}`);
-                    process.exit(1);
-                } else {
+            downloadTemplate(`${GIT_REPO}#${projectType}`, { dir: projectName })
+                .then(() => {
                     const pkgOptions = { name: projectName, version: '1.0.0', description: projectDescription };
                     coverFileByOptions(pathResolve(projectName, 'package.json'), pkgOptions);
-                    removeSync(pathResolve(projectName, '.git'));
                     // copy in create-vue
                     logger.info('\nDone. Now run:\n');
                     logger.success(`  cd ${projectName}`);
-                    logger.success('  npm install');
-                    logger.success('  npm run dev\n');
+                    logger.success('  npm install\n');
                     process.exit(0);
-                }
-            });
+                })
+                .catch((e) => {
+                    logger.error(`\n${e.stack || e.message}`);
+                    process.exit(1);
+                });
         })
         .catch((e) => {
             logger.error(`\n${e.stack || e.message}`);
