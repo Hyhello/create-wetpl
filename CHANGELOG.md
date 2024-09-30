@@ -1,5 +1,12 @@
 # 更新日志
 
+## [0.2.0](https://github.com/Hyhello/create-wetpl/compare/0.1.3...0.2.0) (2024-09-30)
+
+
+### Bug Fixes
+
+* update package.json ([c505e69](https://github.com/Hyhello/create-wetpl/commit/c505e690bf50e1e0ce3f51d1096f5321dbabe345))
+
 ## [0.1.3](https://github.com/Hyhello/create-wetpl/compare/0.1.2...0.1.3) (2024-09-30)
 
 
