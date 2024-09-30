@@ -8,6 +8,6 @@ build({
     minify: true,
     format: 'esm',
     target: 'node14',
-    platform: 'node',
-    external: ['giget', 'prompts']
+    platform: 'node'
+    // external: ['giget', 'prompts']
 });
