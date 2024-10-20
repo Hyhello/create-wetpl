@@ -1,5 +1,12 @@
 # 更新日志
 
+## [0.3.0](https://github.com/Hyhello/create-wetpl/compare/0.2.0...0.3.0) (2024-10-20)
+
+
+### Features
+
+* delete giget use unzip & axios ([299571e](https://github.com/Hyhello/create-wetpl/commit/299571e83e459ffe8239255eaa23a9242d1c9ac6))
+
 ## [0.2.0](https://github.com/Hyhello/create-wetpl/compare/0.1.3...0.2.0) (2024-09-30)
 
 
