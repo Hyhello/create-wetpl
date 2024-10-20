@@ -45,7 +45,7 @@ export async function downloadTemplate(
     input: string,
     options: DownloadTemplateOptions = {}
 ): Promise<DownloadTemplateResult> {
-    const extractPath = pathResolve(options.cwd || '.', options.dir);
+    const extractPath = pathResolve(options.cwd || '.', options.dir || '');
 
     const response = await axios.get(input, { responseType: 'arraybuffer' });
 
