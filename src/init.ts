@@ -3,9 +3,8 @@
 import prompts from 'prompts';
 import logger from './logger';
 import getBanner from './banner';
-import { downloadTemplate } from 'giget';
 import { GIT_REPO, promptsConfig } from './config';
-import { resolveCWD, pathResolve, pathExistsSync, coverFileByOptions } from './utils';
+import { resolveCWD, pathResolve, pathExistsSync, coverFileByOptions, downloadTemplate } from './utils';
 
 function init() {
     // 输出banner
@@ -28,7 +27,7 @@ function init() {
             }
             // copy in create-vue
             logger.info(`\nScaffolding project in ${outputDir}...`);
-            downloadTemplate(`${GIT_REPO}#${projectType}`, { dir: projectName })
+            downloadTemplate(`${GIT_REPO}/${projectType}`, { dir: projectName })
                 .then(() => {
                     const pkgOptions = { name: projectName, version: '1.0.0', description: projectDescription };
                     coverFileByOptions(pathResolve(projectName, 'package.json'), pkgOptions);

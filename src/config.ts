@@ -3,7 +3,7 @@ import type { PromptObject } from 'prompts';
 import { isValidPackageName } from './utils';
 
 // git repo
-export const GIT_REPO = 'github:Hyhello/template';
+export const GIT_REPO = 'https://api.github.com/repos/Hyhello/template/zipball';
 
 // prompts config
 export const promptsConfig: Array<PromptObject> = [

@@ -8,5 +8,4 @@ build({
     minify: true,
     target: 'node14',
     platform: 'node'
-    // external: ['giget', 'prompts']
 });
