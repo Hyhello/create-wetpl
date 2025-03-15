@@ -1,5 +1,12 @@
 # 更新日志
 
+## [0.4.0](https://github.com/Hyhello/create-wetpl/compare/0.3.0...0.4.0) (2025-03-15)
+
+
+### Features
+
+* add react framework template support ([d42cb60](https://github.com/Hyhello/create-wetpl/commit/d42cb60e2b441cbd54e0fe0badc56d0eb42d9f8c))
+
 ## [0.3.0](https://github.com/Hyhello/create-wetpl/compare/0.2.0...0.3.0) (2024-10-20)
 
 
