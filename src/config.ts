@@ -26,9 +26,10 @@ export const promptsConfig: Array<PromptObject> = [
         name: 'projectType',
         message: 'Project template:',
         choices: [
+            { title: 'Uniapp', description: 'Uniapp framework project template', value: 'uniapp' },
+            { title: 'React', description: 'React framework project template', value: 'react' },
             { title: 'Vue2', description: 'Vue2 framework project template', value: 'vue2' },
             { title: 'Vue3', description: 'Vue3 framework project template', value: 'vue3' },
-            { title: 'Uniapp', description: 'Uniapp framework project template', value: 'uniapp' },
             { title: 'Utils', description: 'Utils project template', value: 'utils' }
         ]
     }
